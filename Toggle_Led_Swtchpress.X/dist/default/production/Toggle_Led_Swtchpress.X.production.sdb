@@ -26,7 +26,9 @@
 "21 C:\Users\DELL\OneDrive\Documents\EMD_Code\Toggle_Led_Swtchpress.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"30
+"26
+[v main@i i `ul  1 a 4 0 ]
+"31
 } 0
 "14
 [v _init_config init_config `(v  1 e 1 0 ]

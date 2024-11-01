@@ -23,6 +23,7 @@ void main(void) {
     while (1) {
         if (RB0==0){
             LED_D= ~LED_D;
+            for(unsigned long int i=0;i<100000;i++);
         }
         //write actual code here
 

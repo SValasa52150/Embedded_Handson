@@ -235,16 +235,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 25:             PORTD= ~PORTD;
 [e = _PORTD -> ~ -> _PORTD `i `uc ]
 "26
-[; ;main.c: 26:         }
+[; ;main.c: 26:             for(unsigned long int i=0;i<100000;i++);
+{
+[v _i `ul ~T0 @X0 1 a ]
+[e = _i -> -> -> 0 `i `l `ul ]
+[e $ < _i -> -> 100000 `l `ul 105  ]
+[e $U 106  ]
+[e :U 105 ]
+[e ++ _i -> -> -> 1 `i `l `ul ]
+[e $ < _i -> -> 100000 `l `ul 105  ]
+[e :U 106 ]
+}
+"27
+[; ;main.c: 27:         }
 }
 [e :U 104 ]
-"29
-[; ;main.c: 29:     }
+"30
+[; ;main.c: 30:     }
 }
 [e :U 101 ]
 [e $U 102  ]
 [e :U 103 ]
-"30
-[; ;main.c: 30: }
+"31
+[; ;main.c: 31: }
 [e :UE 100 ]
 }

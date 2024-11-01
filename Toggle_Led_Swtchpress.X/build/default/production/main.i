@@ -1924,6 +1924,7 @@ void main(void) {
     while (1) {
         if (RB0==0){
             PORTD= ~PORTD;
+            for(unsigned long int i=0;i<100000;i++);
         }
 
 
