@@ -1912,23 +1912,29 @@ void init_config(void) {
 }
 void main(void) {
     init_config();
-            int flag = 1;
+    int flag = 1;
+     int c = 50000;
     while (1) {
 
 
-          if (RB0==0){
-            PORTD= ~PORTD;
-            for(unsigned long int i=0;i<50000;i++);
-        }
-
-        if (RB1==0 && flag==1){
+          if (RB1==0 && flag==1){
             flag=0;
             PORTD= ~PORTD;
             for(unsigned long int i=0;i<50000;i++);
         }
-        else if (RB1==1){
+          else if (RB1==1){
             flag = 1;
         }
+
+        if (RB0==0)
+        {
+            if (c-- == 0){
+                c=50000;
+
+                PORTD= ~PORTD;
+            }
+        }
+
 
     }
 }

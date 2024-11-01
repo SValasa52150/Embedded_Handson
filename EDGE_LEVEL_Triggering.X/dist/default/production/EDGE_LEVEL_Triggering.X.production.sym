@@ -1,15 +1,15 @@
 _RB0 30 0 ABS 0
 _RB1 31 0 ABS 0
 __S0 800 0 ABS 0
-__S1 7A 0 ABS 0
+__S1 78 0 ABS 0
 __S3 0 0 ABS 0
 __Hintentry 0 0 CODE 0
 __Lintentry 0 0 CODE 0
-_main 784 0 CODE 0
+_main 792 0 CODE 0
 ___sp 0 0 STACK 2
 btemp 7E 0 ABS 0
 start 0 0 CODE 0
-main@flag 70 0 COMMON 1
+main@flag 72 0 COMMON 1
 _TRISB 86 0 ABS 0
 reset_vec 0 0 CODE 0
 _TRISD 88 0 ABS 0
@@ -17,7 +17,8 @@ _PORTD 8 0 ABS 0
 wtemp0 7E 0 ABS 0
 __Hconfig 2008 0 CONFIG 4
 __Lconfig 0 0 CONFIG 4
-main@i 72 0 COMMON 1
+main@c 70 0 COMMON 1
+main@i 74 0 COMMON 1
 __Hram 0 0 ABS 0
 __Lram 0 0 ABS 0
 ___int_stack_hi 0 0 STACK 2
@@ -67,7 +68,7 @@ __Lbank3 0 0 ABS 0
 ___latbits 2 0 ABS 0
 __Hpowerup 0 0 CODE 0
 __Lpowerup 0 0 CODE 0
-__ptext1 777 0 CODE 0
+__ptext1 785 0 CODE 0
 ___stack_hi 0 0 STACK 2
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
@@ -80,7 +81,7 @@ __Hstack 0 0 STACK 2
 __Lstack 0 0 STACK 2
 __Hspace_0 800 0 ABS 0
 __Lspace_0 0 0 ABS 0
-__Hspace_1 7A 0 ABS 0
+__Hspace_1 78 0 ABS 0
 __Lspace_1 0 0 ABS 0
 __Hspace_2 0 0 ABS 0
 __Lspace_2 0 0 ABS 0
@@ -91,14 +92,13 @@ __Lspace_3 0 0 ABS 0
 __Hspace_4 400F 0 ABS 0
 __Lspace_4 0 0 ABS 0
 ___stack_lo 0 0 STACK 2
-main@i_36 76 0 COMMON 1
 __Hend_init 3 0 CODE 0
 __Lend_init 0 0 CODE 0
 __Hreset_vec 0 0 CODE 0
 __Lreset_vec 0 0 CODE 0
 intlevel0 0 0 ENTRY 0
 intlevel1 0 0 ENTRY 0
-__end_of_init_config 784 0 CODE 0
+__end_of_init_config 792 0 CODE 0
 intlevel2 0 0 ENTRY 0
 intlevel3 0 0 ENTRY 0
 intlevel4 0 0 ENTRY 0
@@ -110,48 +110,47 @@ start_initialization 7FC 0 CODE 0
 ___int_stack_lo 0 0 STACK 2
 __Hmaintext 0 0 ABS 0
 __Lmaintext 0 0 ABS 0
-__pmaintext 784 0 CODE 0
-_init_config 777 0 CODE 0
+__pmaintext 792 0 CODE 0
+_init_config 785 0 CODE 0
 __initialization 7FC 0 CODE 0
 %segments
 reset_vec 0 5 CODE 0 0
 cinit FF8 FFF CODE FF8 0
-cstackCOMMON 70 79 COMMON 70 1
-maintext F08 FF7 CODE F08 0
-text1 EEE F07 CODE EEE 0
+cstackCOMMON 70 77 COMMON 70 1
+maintext F24 FF7 CODE F24 0
+text1 F0A F23 CODE F0A 0
 %locals
 dist/default/production\EDGE_LEVEL_Triggering.X.production.o
-C:\Users\DELL\AppData\Local\Temp\xcAsa98.\driver_tmp_1.s
+C:\Users\DELL\AppData\Local\Temp\xcAse6g.\driver_tmp_1.s
 352 7FC 0 CODE 0
 355 7FC 0 CODE 0
 361 7FC 0 CODE 0
 363 7FC 0 CODE 0
 364 7FD 0 CODE 0
 main.c
-12 784 0 CODE 0
-13 784 0 CODE 0
-14 789 0 CODE 0
-18 78D 0 CODE 0
-19 793 0 CODE 0
-20 794 0 CODE 0
-20 79F 0 CODE 0
-20 7A3 0 CODE 0
-20 7A7 0 CODE 0
-20 7B2 0 CODE 0
-20 7B6 0 CODE 0
-21 7BC 0 CODE 0
-23 7BC 0 CODE 0
-24 7C8 0 CODE 0
-25 7CA 0 CODE 0
-26 7CB 0 CODE 0
-26 7D6 0 CODE 0
-26 7DA 0 CODE 0
-26 7DE 0 CODE 0
-26 7E9 0 CODE 0
-26 7ED 0 CODE 0
-28 7F4 0 CODE 0
-6 777 0 CODE 0
-7 777 0 CODE 0
-8 77A 0 CODE 0
-9 77E 0 CODE 0
-11 783 0 CODE 0
+12 792 0 CODE 0
+13 792 0 CODE 0
+14 797 0 CODE 0
+15 79B 0 CODE 0
+19 79F 0 CODE 0
+20 7AB 0 CODE 0
+21 7AD 0 CODE 0
+22 7AE 0 CODE 0
+22 7B9 0 CODE 0
+22 7BD 0 CODE 0
+22 7C1 0 CODE 0
+22 7CC 0 CODE 0
+22 7D0 0 CODE 0
+24 7D7 0 CODE 0
+25 7DB 0 CODE 0
+28 7DF 0 CODE 0
+30 7E5 0 CODE 0
+30 7E7 0 CODE 0
+30 7EC 0 CODE 0
+31 7F3 0 CODE 0
+33 7F7 0 CODE 0
+6 785 0 CODE 0
+7 785 0 CODE 0
+8 788 0 CODE 0
+9 78C 0 CODE 0
+11 791 0 CODE 0

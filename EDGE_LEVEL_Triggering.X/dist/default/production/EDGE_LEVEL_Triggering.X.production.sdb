@@ -28,13 +28,13 @@
 "12 C:\Users\DELL\OneDrive\Documents\EMD_Code\EDGE_LEVEL_Triggering.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"26
-[v main@i_36 i `ul  1 a 4 6 ]
-"20
-[v main@i i `ul  1 a 4 2 ]
+"22
+[v main@i i `ul  1 a 4 4 ]
 "14
-[v main@flag flag `i  1 a 2 0 ]
-"33
+[v main@flag flag `i  1 a 2 2 ]
+"15
+[v main@c c `i  1 a 2 0 ]
+"39
 } 0
 "6
 [v _init_config init_config `(v  1 e 1 0 ]
