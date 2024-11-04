@@ -1,0 +1,43 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"6 C:\Users\DELL\OneDrive\Documents\EMD_Code\SSD_1&2_aproaches.X\main.c
+[v _init_config init_config `(v  1 e 1 0 ]
+"23
+[v _main main `(v  1 e 1 0 ]
+"167 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"341
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"1326
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1500
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"23 C:\Users\DELL\OneDrive\Documents\EMD_Code\SSD_1&2_aproaches.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"41
+[v main@l l `i  1 a 2 6 ]
+"38
+[v main@k k `i  1 a 2 4 ]
+"35
+[v main@j j `i  1 a 2 2 ]
+"32
+[v main@i i `i  1 a 2 0 ]
+"51
+} 0
+"6
+[v _init_config init_config `(v  1 e 1 0 ]
+{
+"10
+} 0
