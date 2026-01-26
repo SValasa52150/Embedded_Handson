@@ -91,6 +91,19 @@ int main(void)
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
 
+  /* Initialize lwIP stack */
+  lwip_init();
+
+  ip4_addr_t ipaddr, netmask, gw;
+  IP4_ADDR(&ipaddr, 192, 168, 1, 50);
+  IP4_ADDR(&netmask, 255, 255, 255, 0);
+  IP4_ADDR(&gw, 192, 168, 1, 1);
+
+  netif_add(&gnetif, &ipaddr, &netmask, &gw,
+            NULL, ethernetif_init, ethernet_input);
+
+  netif_set_default(&gnetif);
+  netif_set_up(&gnetif);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -99,6 +112,8 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
+    ethernetif_input(&gnetif);   // Poll ENC28J60 RX
+    sys_check_timeouts();        // lwIP timers
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
