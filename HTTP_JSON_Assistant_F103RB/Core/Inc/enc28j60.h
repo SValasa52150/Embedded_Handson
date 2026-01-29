@@ -435,6 +435,5 @@ bool enc_get_received_frame(ENC_HandleTypeDef *handle);
 void enc_irq_handler(ENC_HandleTypeDef *handle);
 void enc_enable_interrupts(uint8_t bits);
 void udelay(uint32_t us);
-void enc28j60_init(uint8_t *mac);
-uint16_t enc28j60_packet_receive(uint8_t *buf, uint16_t len);
+
 #endif /* ENC28J60_H_INCLUDED */

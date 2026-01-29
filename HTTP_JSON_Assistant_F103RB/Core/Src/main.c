@@ -92,7 +92,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   /* Initialize lwIP stack */
-  lwip_init();
+  MX_LWIP_Init();
 
   ip4_addr_t ipaddr, netmask, gw;
   IP4_ADDR(&ipaddr, 192, 168, 1, 50);
@@ -110,11 +110,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
-
-    ethernetif_input(&gnetif);   // Poll ENC28J60 RX
-    sys_check_timeouts();        // lwIP timers
-    /* USER CODE BEGIN 3 */
+      ethernetif_input(&gnetif);
+      sys_check_timeouts();
   }
   /* USER CODE END 3 */
 }

@@ -42,8 +42,8 @@
 /* Includes ------------------------------------------------------------------*/
 #include "enc28j60.h"
 #include "main.h"
-
-//#include "gpio.h"
+#include "spi.h"
+#include "gpio.h"
 
 /* Poll timeout */
 #define ENC_POLLTIMEOUT 50
@@ -69,7 +69,8 @@
 #define SPIx_CS   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);udelay(1)
 #define SPIx_DS   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET);udelay(1)
 
-extern SPI_HandleTypeDef hspi1;
+#define ENC28J60_CS_LOW()  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET)
+#define ENC28J60_CS_HIGH() HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET)
 
 static uint8_t SPIx_TxRx(uint8_t cmd)
 {
@@ -627,4 +628,3 @@ static void enc_linkstatus(ENC_HandleTypeDef *handle)
 {
   handle->LinkStatus = enc_rdphy(handle, ENC_PHSTAT2);
 }
-
