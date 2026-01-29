@@ -42,11 +42,19 @@
 /* Includes ------------------------------------------------------------------*/
 #include "enc28j60.h"
 #include "main.h"
-#include "spi.h"
-#include "gpio.h"
+#include "stm32f1xx_hal.h"
+extern SPI_HandleTypeDef hspi1;
+//#include "gpio.h"
 
 /* Poll timeout */
 #define ENC_POLLTIMEOUT 50
+
+#define ENC_CS_PORT   GPIOA
+#define ENC_CS_PIN    GPIO_PIN_4
+
+#define ENC_RST_PORT  GPIOA
+#define ENC_RST_PIN   GPIO_PIN_0
+
 
 /* Packet Memory ************************************************************/
 /* Packet memory layout */
@@ -71,6 +79,9 @@
 
 #define ENC28J60_CS_LOW()  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET)
 #define ENC28J60_CS_HIGH() HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET)
+
+#define ENC_CS_LOW()   HAL_GPIO_WritePin(ENC_CS_PORT, ENC_CS_PIN, GPIO_PIN_RESET)
+#define ENC_CS_HIGH()  HAL_GPIO_WritePin(ENC_CS_PORT, ENC_CS_PIN, GPIO_PIN_SET)
 
 static uint8_t SPIx_TxRx(uint8_t cmd)
 {

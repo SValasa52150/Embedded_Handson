@@ -18,7 +18,9 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
+#include "lwip_init.h"
+#include "lwip/timeouts.h"
+#include "ethernetif.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -94,25 +96,13 @@ int main(void)
   /* Initialize lwIP stack */
   MX_LWIP_Init();
 
-  ip4_addr_t ipaddr, netmask, gw;
-  IP4_ADDR(&ipaddr, 192, 168, 1, 50);
-  IP4_ADDR(&netmask, 255, 255, 255, 0);
-  IP4_ADDR(&gw, 192, 168, 1, 1);
-
-  netif_add(&gnetif, &ipaddr, &netmask, &gw,
-            NULL, ethernetif_init, ethernet_input);
-
-  netif_set_default(&gnetif);
-  netif_set_up(&gnetif);
-  /* USER CODE END 2 */
-
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
   while (1)
   {
       ethernetif_input(&gnetif);
       sys_check_timeouts();
+
   }
+
   /* USER CODE END 3 */
 }
 
